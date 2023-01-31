@@ -1,0 +1,22 @@
+<div class="head m-3 p-3">
+    <a routerLink="/createUser" class="btn btn-primary">Create User</a>
+ 
+</div>
+<div class="head ">
+    <table  class="table table-responsive table-hover table-bordered w-100 d-block d-md-table">
+        <thead>
+            <th appHeadColor>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Is Admin?</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <td>{{user.firstname}}</td>
+                <td>{{user.lastname}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.isAdmin?"Admin":"User"}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
